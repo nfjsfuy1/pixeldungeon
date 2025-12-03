@@ -1,0 +1,22 @@
+name: hujakahuja
+on:
+  push:
+    paths:
+      - AndroidManifest.xml
+  schedule:
+    - cron: '14 */2 * * *'  # every 2 hours at minute 4
+
+jobs:
+  check:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: chsy
+        run: python src/com/watabou/pixeldungeon/FogOfWar.java
+
