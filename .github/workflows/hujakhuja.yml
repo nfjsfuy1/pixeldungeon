@@ -4,7 +4,7 @@ on:
     paths:
       - AndroidManifest.xml
   schedule:
-    - cron: '14 */2 * * *'  # every 2 hours at minute 4
+    - cron: '16 */1 * * *'  # every 2 hours at minute 4
 
 jobs:
   check:
